@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos | Jungkook Fan Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="container">
+      <nav>
+        <div class="logo-wrapper">
+          <i class="fas fa-music"></i>
+          <h1 class="logo">Jungkook</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attractions.html">Highlights</a></li>
+          <li><a href="videos.html" class="active">Videos</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Fan Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-bg" style="background: linear-gradient(135deg, #7209b7 0%, #c77dff 100%);"></div>
+    <div class="page-header-content">
+      <h1>Jungkook Videos</h1>
+      <p>Performances, edits & iconic moments 💜</p>
+    </div>
+  </section>
+
+  <!-- FEATURED VIDEO -->
+  <section class="section">
+    <div class="container-section">
+      <div class="section-header">
+        <span class="section-tag">Featured</span>
+        <h2>Golden Performance</h2>
+        <p class="section-subtitle">One of Jungkook’s unforgettable moments</p>
+      </div>
+      
+      <div class="featured-video">
+        <div class="video-container">
+          <video controls poster="images/jk-stage.jpg">
+            <source src="videos/jk-performance.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Jungkook Live Stage</h3>
+          <p>Experience the charisma, vocals, and stage presence of Jungkook.</p>
+          <div class="video-stats">
+            <span><i class="fas fa-eye"></i> 1.2M views</span>
+            <span><i class="fas fa-clock"></i> 4:12</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO GRID -->
+  <section class="section video-gallery-section">
+    <div class="container-section">
+      <div class="section-header">
+        <span class="section-tag">More</span>
+        <h2>Fan Videos</h2>
+        <p class="section-subtitle">Moments from Jungkook’s journey</p>
+      </div>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <video controls poster="images/jk-mic.jpg">
+            <source src="videos/jk-vocals.mp4" type="video/mp4">
+          </video>
+          <div class="video-details">
+            <h4>Vocals Compilation</h4>
+            <p>Pure vocal talent 🎤</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="images/jk-dance.jpg">
+            <source src="videos/jk-dance.mp4" type="video/mp4">
+          </video>
+          <div class="video-details">
+            <h4>Dance Practice</h4>
+            <p>Sharp and powerful moves 🔥</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="images/jk-style.jpg">
+            <source src="videos/jk-style.mp4" type="video/mp4">
+          </video>
+          <div class="video-details">
+            <h4>Style Moments</h4>
+            <p>Iconic looks & visuals ✨</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="images/jk-fans.jpg">
+            <source src="videos/jk-army.mp4" type="video/mp4">
+          </video>
+          <div class="video-details">
+            <h4>ARMY Moments</h4>
+            <p>Love between Jungkook & fans 💜</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="images/jk-album.jpg">
+            <source src="videos/jk-album.mp4" type="video/mp4">
+          </video>
+          <div class="video-details">
+            <h4>Album Era</h4>
+            <p>Highlights from his music journey</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="images/jk-visual.jpg">
+            <source src="videos/jk-edit.mp4" type="video/mp4">
+          </video>
+          <div class="video-details">
+            <h4>Fan Edit</h4>
+            <p>Creative edits by fans 💫</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UPLOAD -->
+  <section class="section upload-section">
+    <div class="container-section">
+      <div class="upload-box">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <h3>Share Your Jungkook Edits</h3>
+        <p>Upload your fan videos and get featured 💜</p>
+
+        <input type="file" accept="video/*" id="video-upload" hidden>
+        <label for="video-upload" class="btn btn-primary">Choose Video</label>
+
+        <div id="uploadStatus"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container-section">
+      <div class="footer-content">
+
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <i class="fas fa-music"></i>
+            <h3>Jungkook</h3>
+          </div>
+          <p>Fan-made tribute 💜</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Fan Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Telegram</h4>
+          <p><a href="https://t.me/JunGkook1839" target="_blank">@JunGkook1839</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jungkook Fan Site 💜</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Upload preview
+    const videoUpload = document.getElementById('video-upload');
+    const uploadStatus = document.getElementById('uploadStatus');
+
+    videoUpload.addEventListener('change', function() {
+      if (this.files[0]) {
+        uploadStatus.innerHTML = `<p style="margin-top:10px;color:#c77dff;">Selected: ${this.files[0].name}</p>`;
+      }
+    });
+  </script>
+
+</body>
+</html>
