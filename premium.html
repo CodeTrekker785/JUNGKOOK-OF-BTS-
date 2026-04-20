@@ -1,0 +1,14 @@
+<h2>Premium Fans Gallery</h2>
+<div id="premium"></div>
+
+<script>
+let premium = document.getElementById("premium");
+
+for (let i = 1; i <= 20; i++) {
+  let img = document.createElement("img");
+  img.src = `premium/photos/premium${i}.jpg`;
+  img.width = 200;
+
+  premium.appendChild(img);
+}
+</script>
