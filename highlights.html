@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungkook Highlights</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .section {
+      margin: 30px;
+      padding: 20px;
+      background: #1c1c1c;
+      border-radius: 15px;
+    }
+
+    h2 {
+      color: #b266ff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #333;
+    }
+
+    .highlight-card {
+      margin: 15px;
+      padding: 15px;
+      background: #2a2a2a;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🌟 Jungkook Highlights</h1>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="videos.html">Videos</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="premium.html">Premium</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Career Highlights -->
+<div class="section">
+  <h2>🏆 Career Highlights</h2>
+
+  <div class="highlight-card">
+    <p>Member of global group BTS</p>
+  </div>
+
+  <div class="highlight-card">
+    <p>Known as the "Golden Maknae"</p>
+  </div>
+
+  <div class="highlight-card">
+    <p>Performed on major world stages</p>
+  </div>
+</div>
+
+<!-- Achievements -->
+<div class="section">
+  <h2>🥇 Achievements</h2>
+  <ul>
+    <li>Millions of global fans (ARMY)</li>
+    <li>Top charting solo releases</li>
+    <li>Record-breaking music videos</li>
+    <li>International awards & recognition</li>
+  </ul>
+</div>
+
+<!-- Skills -->
+<div class="section">
+  <h2>🎤 Skills & Talents</h2>
+  <ul>
+    <li>Vocals</li>
+    <li>Dancing</li>
+    <li>Songwriting</li>
+    <li>Video directing</li>
+    <li>Photography</li>
+  </ul>
+</div>
+
+<!-- Fun Moments -->
+<div class="section">
+  <h2>💜 Fun Moments</h2>
+
+  <div id="funMoments"></div>
+</div>
+
+<script>
+let fun = document.getElementById("funMoments");
+
+// Auto generate highlight moments
+for (let i = 1; i <= 10; i++) {
+  let div = document.createElement("div");
+  div.className = "highlight-card";
+  div.innerText = "Iconic Jungkook Moment #" + i;
+
+  fun.appendChild(div);
+}
+</script>
+
+</body>
+</html>
