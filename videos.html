@@ -1,23 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jungkook Videos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungkook Videos | The Visual Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+      border: 1px solid #333;
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+      border-color: #6a00f4;
+    }
+
+    .video-card video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16/9;
+      background: #000;
+    }
+
+    .video-info {
+      padding: 15px;
+    }
+
+    .video-info h3 {
+      font-size: 1rem;
+      color: #c77dff;
+      margin: 0 0 5px 0;
+    }
+
+    .video-info p {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+
+    .featured-badge {
+      background: #6a00f4;
+      color: white;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
 
-<h2>Jungkook Videos</h2>
-<div id="videoContainer"></div>
+<section class="page-header">
+    <div class="page-header-content">
+        <h1>Music & Performances 🎤</h1>
+        <p>Watch the Golden Maknae in action</p>
+    </div>
+</section>
+
+<div class="container-section">
+    <h2 style="margin-left: 40px; color: #fff;"><i class="fas fa-fire"></i> Must Watch</h2>
+    <div class="video-grid">
+        <div class="video-card">
+            <div class="video-info">
+                <span class="featured-badge">Billions Club</span>
+                <h3>Seven (feat. Latto)</h3>
+                <p>Official Music Video</p>
+            </div>
+            <video src="media/videos/official_seven.mp4" controls poster="media/photos/seven_thumb.jpg"></video>
+        </div>
+
+        <div class="video-card">
+            <div class="video-info">
+                <span class="featured-badge">Award Winner</span>
+                <h3>Standing Next To You</h3>
+                <p>Official Choreography Version</p>
+            </div>
+            <video src="media/videos/official_snty.mp4" controls></video>
+        </div>
+    </div>
+</div>
+
+<hr style="border: 0; border-top: 1px solid #333; margin: 40px;">
+
+<div class="container-section">
+    <h2 style="margin-left: 40px; color: #fff;"><i class="fas fa-film"></i> Fan Archives</h2>
+    <div id="videoContainer" class="video-grid"></div>
+</div>
 
 <script>
 let container = document.getElementById("videoContainer");
 
-for (let i = 1; i <= 100; i++) {
-  let video = document.createElement("video");
-  video.src = `media/videos/video${i}.mp4`;
-  video.controls = true;
-  video.width = 300;
+// Generate archives for the remaining videos
+for (let i = 1; i <= 20; i++) { // Adjusted to 20 for better demo performance
+  let card = document.createElement("div");
+  card.className = "video-card";
 
-  container.appendChild(video);
+  card.innerHTML = `
+    <video src="media/videos/video${i}.mp4" controls preload="metadata"></video>
+    <div class="video-info">
+        <h3>Jungkook Moment #${i}</h3>
+        <p>Added to Archive: 2026</p>
+    </div>
+  `;
+
+  container.appendChild(card);
 }
 </script>
 
