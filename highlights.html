@@ -1,111 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jungkook Highlights</title>
-  <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlights | Jungkook Fan Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
+    body { background-color: #0f0f0f; color: #fff; font-family: 'Poppins', sans-serif; }
+    
     .section {
-      margin: 30px;
-      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      padding: 30px;
       background: #1c1c1c;
-      border-radius: 15px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    h2 {
-      color: #b266ff;
-    }
+    h2 { color: #c77dff; border-left: 5px solid #6a00f4; padding-left: 15px; margin-bottom: 25px; }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      padding: 8px;
-      border-bottom: 1px solid #333;
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .highlight-card {
-      margin: 15px;
-      padding: 15px;
-      background: #2a2a2a;
-      border-radius: 10px;
+      padding: 20px;
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      border-radius: 15px;
+      border: 1px solid #333;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      border-color: #6a00f4;
+      box-shadow: 0 5px 15px rgba(106, 0, 244, 0.3);
+    }
+
+    .icon-box {
+      font-size: 1.5rem;
+      color: #c77dff;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #6a00f4;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 0.85rem;
+    }
+
+    #funMoments {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
   </style>
 </head>
 
 <body>
 
-<h1>🌟 Jungkook Highlights</h1>
+<header id="main-header">
+    <div class="container">
+      <nav>
+        <div class="logo-wrapper">
+          <i class="fas fa-star"></i>
+          <h1 class="logo">JK Highlights</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="highlights.html" class="active">Highlights</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+</header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="videos.html">Videos</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="premium.html">Premium</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<!-- Career Highlights -->
 <div class="section">
-  <h2>🏆 Career Highlights</h2>
-
-  <div class="highlight-card">
-    <p>Member of global group BTS</p>
-  </div>
-
-  <div class="highlight-card">
-    <p>Known as the "Golden Maknae"</p>
-  </div>
-
-  <div class="highlight-card">
-    <p>Performed on major world stages</p>
+  <h2>🏆 Career Milestones</h2>
+  <div class="highlight-grid">
+    <div class="highlight-card">
+      <div class="icon-box"><i class="fas fa-flag"></i></div>
+      <p>Official Military Discharge (June 11, 2025) 🇰🇷</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon-box"><i class="fas fa-record-vinyl"></i></div>
+      <p>Over 7 Billion Spotify Streams (First Korean Soloist)</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon-box"><i class="fas fa-globe"></i></div>
+      <p>Billboard #1 with "Seven" and "Standing Next To You"</p>
+    </div>
   </div>
 </div>
 
-<!-- Achievements -->
 <div class="section">
-  <h2>🥇 Achievements</h2>
-  <ul>
-    <li>Millions of global fans (ARMY)</li>
-    <li>Top charting solo releases</li>
-    <li>Record-breaking music videos</li>
-    <li>International awards & recognition</li>
-  </ul>
+  <h2>🥇 Record Breaker</h2>
+  <div class="highlight-grid">
+    <div class="highlight-card">
+      <p><strong>People's Choice Awards:</strong> Male Artist of the Year (2024)</p>
+    </div>
+    <div class="highlight-card">
+      <p><strong>Guinness World Record:</strong> Fastest solo artist to reach 1B streams</p>
+    </div>
+    <div class="highlight-card">
+      <p><strong>BRIT Awards:</strong> First Korean soloist to get Silver certification</p>
+    </div>
+  </div>
 </div>
 
-<!-- Skills -->
 <div class="section">
-  <h2>🎤 Skills & Talents</h2>
-  <ul>
-    <li>Vocals</li>
-    <li>Dancing</li>
-    <li>Songwriting</li>
-    <li>Video directing</li>
-    <li>Photography</li>
-  </ul>
+  <h2>🎤 The Golden Toolkit</h2>
+  <div style="text-align: center;">
+    <span class="skill-tag">Main Vocalist</span>
+    <span class="skill-tag">Lead Dancer</span>
+    <span class="skill-tag">Sub Rapper</span>
+    <span class="skill-tag">Video Director (G.C.F)</span>
+    <span class="skill-tag">Songwriter</span>
+    <span class="skill-tag">Boxer</span>
+    <span class="skill-tag">Visual King</span>
+  </div>
 </div>
 
-<!-- Fun Moments -->
 <div class="section">
-  <h2>💜 Fun Moments</h2>
-
+  <h2>💜 Iconic Moments</h2>
   <div id="funMoments"></div>
 </div>
 
 <script>
+const moments = [
+    "The 2022 World Cup Opening Performance",
+    "CK Global Ambassador Launch",
+    "First Solo Documentary 'I Am Still'",
+    "The 15-hour Weverse Live marathons",
+    "Lollapalooza Headlining Performance",
+    "Winning his first Solo VMA",
+    "The 'Golden' Live on Stage Concert",
+    "Every 'Bam' (his dog) moment",
+    "Cooking sessions on Live",
+    "The Emotional 2025 Reunion"
+];
+
 let fun = document.getElementById("funMoments");
 
-// Auto generate highlight moments
-for (let i = 1; i <= 10; i++) {
+moments.forEach((text, i) => {
   let div = document.createElement("div");
   div.className = "highlight-card";
-  div.innerText = "Iconic Jungkook Moment #" + i;
-
+  div.style.width = "100%";
+  div.innerHTML = `<span style="color:#c77dff; font-weight:bold;">#${i+1}</span> ${text}`;
   fun.appendChild(div);
-}
+});
 </script>
 
 </body>
