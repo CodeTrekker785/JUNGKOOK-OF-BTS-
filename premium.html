@@ -1,14 +1,118 @@
-<h2>Premium Fans Gallery</h2>
-<div id="premium"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium | Jungkook Exclusive</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .premium-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('media/premium-bg.jpg');
+            background-size: cover;
+            color: gold;
+        }
 
-<script>
-let premium = document.getElementById("premium");
+        .premium-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-for (let i = 1; i <= 20; i++) {
-  let img = document.createElement("img");
-  img.src = `premium/photos/premium${i}.jpg`;
-  img.width = 200;
+        .premium-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            background: #1a1a1a;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
 
-  premium.appendChild(img);
-}
-</script>
+        .premium-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.5); /* The "Locked" effect */
+            transition: 0.5s;
+        }
+
+        .lock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .lock-overlay i {
+            font-size: 2.5rem;
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .premium-banner {
+            background: #ffd700;
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="premium-banner">
+        ✨ UNLOCK FULL HQ ACCESS - JOIN THE GOLDEN CLUB ✨
+    </div>
+
+    <section class="premium-header">
+        <h1 style="font-size: 3rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Premium Gallery</h1>
+        <p>Exclusive 4K Unseen Visuals & Behind-the-Scenes</p>
+        <button class="btn btn-primary" style="background: gold; color: black; border: none; margin-top: 20px;">
+            Upgrade to Premium 👑
+        </button>
+    </section>
+
+    <div id="premium" class="premium-grid">
+        </div>
+
+    <script>
+        const premiumContainer = document.getElementById("premium");
+
+        for (let i = 1; i <= 20; i++) {
+            let container = document.createElement("div");
+            container.className = "premium-item";
+
+            // The blurred image
+            let img = document.createElement("img");
+            img.src = `premium/photos/premium${i}.jpg`;
+            img.onerror = function() {
+                this.src = 'https://via.placeholder.com/400x500/1a1a1a/gold?text=Premium+Visual';
+            };
+
+            // The lock icon
+            let overlay = document.createElement("div");
+            overlay.className = "lock-overlay";
+            overlay.innerHTML = `
+                <i class="fas fa-lock"></i>
+                <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Premium Only</p>
+            `;
+
+            container.appendChild(img);
+            container.appendChild(overlay);
+            premiumContainer.appendChild(container);
+        }
+    </script>
+
+</body>
+</html>
