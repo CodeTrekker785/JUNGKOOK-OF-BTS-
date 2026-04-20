@@ -1,21 +1,145 @@
+/* --- Global Reset & Variables --- */
+:root {
+  --primary-purple: #6a00f4;
+  --light-purple: #c77dff;
+  --gold: #ffd700;
+  --dark-bg: #0f0f0f;
+  --card-bg: #1a1a1a;
+  --text-main: #ffffff;
+  --text-dim: #aaaaaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial;
-  background: #111;
-  color: white;
+  font-family: 'Poppins', Arial, sans-serif; /* Using the font we linked in HTML */
+  background-color: var(--dark-bg);
+  color: var(--text-main);
+  line-height: 1.6;
   text-align: center;
 }
 
-nav a {
-  margin: 10px;
-  color: purple;
-  text-decoration: none;
+/* --- Navigation --- */
+header {
+  background: rgba(15, 15, 15, 0.95);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav a:hover, nav a.active {
+  color: var(--light-purple);
+}
+
+/* --- Page Headers & Hero --- */
+.page-header {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  border-bottom: 2px solid var(--primary-purple);
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  color: var(--light-purple);
+  margin-bottom: 10px;
+}
+
+/* --- Common Components --- */
+.container-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary-purple);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn:hover {
+  background: var(--light-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 0, 244, 0.4);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--primary-purple);
+}
+
+/* --- Responsive Images & Videos --- */
 img {
-  margin: 5px;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
 video {
-  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  max-width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: #050505;
+  border-top: 1px solid #222;
+  color: var(--text-dim);
+}
+
+/* --- Mobile Menu Styles --- */
+@media (max-width: 768px) {
+  .page-header h1 { font-size: 2rem; }
+  
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin: 0 auto 10px;
+  }
+  
+  .nav-links {
+    display: none; /* Hidden by default on mobile until JS toggles it */
+    flex-direction: column;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
 }
