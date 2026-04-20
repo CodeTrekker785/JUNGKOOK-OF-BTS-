@@ -1,8 +1,117 @@
-<h2>Contact</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Jungkook Fan Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Specific styling for the Contact Page */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
 
-<form>
-  <input type="text" placeholder="Your Name"><br>
-  <input type="email" placeholder="Email"><br>
-  <textarea placeholder="Message"></textarea><br>
-  <button type="submit">Send</button>
-</form>
+        .contact-info {
+            background: #6a00f4;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .telegram-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+            border: 1px dashed #c77dff;
+        }
+
+        .telegram-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="page-header" style="background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);">
+        <div class="page-header-content">
+            <h1>Get In Touch 💜</h1>
+            <p>Have questions or fan projects? Reach out!</p>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Connect with Us</h2>
+            <p>Join our community for the latest updates on Jungkook's solo activities and BTS news.</p>
+            
+            <div class="telegram-card">
+                <p>Join our official Telegram channel:</p>
+                <a href="https://t.me/JunGkook1839" class="telegram-link" target="_blank">
+                    <i class="fab fa-telegram"></i> @JunGkook1839
+                </a>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <p><i class="fas fa-envelope"></i> fan-support@jk-site.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Seoul, South Korea</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required>
+                
+                <label>Email Address</label>
+                <input type="email" placeholder="army@example.com" required>
+                
+                <label>Message</label>
+                <textarea placeholder="Write your message here..."></textarea>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
