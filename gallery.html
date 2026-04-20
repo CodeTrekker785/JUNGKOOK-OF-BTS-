@@ -1,24 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungkook Gallery | Visuals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 1 / 1;
+            background: #eee; /* Placeholder color */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(106, 0, 244, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .gallery-item img.loaded {
+            opacity: 1;
+        }
+
+        /* Loading Spinner */
+        .loader {
+            text-align: center;
+            padding: 20px;
+            color: #6a00f4;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Jungkook Gallery</h2>
-<div id="gallery"></div>
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Jungkook Gallery 📸</h1>
+            <p>100+ High Quality Visuals of JK</p>
+        </div>
+    </section>
 
-<script>
-let gallery = document.getElementById("gallery");
+    <div id="gallery" class="gallery-grid">
+        </div>
 
-for (let i = 1; i <= 100; i++) {
-  let img = document.createElement("img");
-  img.src = `media/photos/photo${i}.jpg`;
-  img.width = 200;
+    <div id="loading" class="loader">
+        <i class="fas fa-circle-notch fa-spin fa-2x"></i>
+    </div>
 
-  gallery.appendChild(img);
-}
-</script>
+    <script>
+        const gallery = document.getElementById("gallery");
+        
+        // Loop to create 100 image slots
+        for (let i = 1; i <= 100; i++) {
+            let container = document.createElement("div");
+            container.className = "gallery-item";
+
+            let img = document.createElement("img");
+            // Native lazy loading
+            img.loading = "lazy"; 
+            img.src = `media/photos/photo${i}.jpg`;
+            img.alt = `Jungkook Photo ${i}`;
+            
+            // Fade in effect once loaded
+            img.onload = function() {
+                this.classList.add('loaded');
+            };
+
+            // Error handling if image doesn't exist
+            img.onerror = function() {
+                this.parentElement.style.display = 'none'; 
+            };
+
+            container.appendChild(img);
+            gallery.appendChild(container);
+        }
+
+        // Hide loader when loop finishes (simple version)
+        document.getElementById('loading').style.display = 'none';
+    </script>
 
 </body>
 </html>
