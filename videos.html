@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungkook Videos</title>
+</head>
+<body>
+
+<h2>Jungkook Videos</h2>
+<div id="videoContainer"></div>
+
+<script>
+let container = document.getElementById("videoContainer");
+
+for (let i = 1; i <= 100; i++) {
+  let video = document.createElement("video");
+  video.src = `media/videos/video${i}.mp4`;
+  video.controls = true;
+  video.width = 300;
+
+  container.appendChild(video);
+}
+</script>
+
+</body>
+</html>
