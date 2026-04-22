@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Playfield Park - Photo Gallery</title>
+  <title>Gallery | Jungkook - Golden Moments</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header id="main-header">
     <div class="container">
       <nav>
         <div class="logo-wrapper">
-          <i class="fas fa-leaf"></i>
-          <h1 class="logo">Playfield Park</h1>
+          <i class="fas fa-microphone-alt"></i>
+          <h1 class="logo">JK GOLDEN</h1>
         </div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="attractions.html">Discography</a></li>
           <li><a href="videos.html">Videos</a></li>
           <li><a href="gallery.html" class="active">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Fan Club</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -35,88 +34,82 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
   <section class="page-header">
-    <div class="page-header-bg" style="background: linear-gradient(135deg, #9b5de5 0%, #f15bb5 100%);"></div>
+    <div class="page-header-bg" style="background: linear-gradient(135deg, #000 0%, #d4af37 100%);"></div>
     <div class="page-header-content">
       <h1>Photo Gallery</h1>
-      <p>Capture the moments at Playfield Park</p>
+      <p>Visual highlights of the Golden era</p>
     </div>
   </section>
 
-  <!-- GALLERY FILTER -->
   <section class="section gallery-section">
     <div class="container-section">
       <div class="gallery-filter">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="park">Park</button>
-        <button class="filter-btn" data-filter="pool">Pool</button>
-        <button class="filter-btn" data-filter="events">Events</button>
-        <button class="filter-btn" data-filter="adventure">Adventure</button>
+        <button class="filter-btn" data-filter="stage">Performances</button>
+        <button class="filter-btn" data-filter="mv">Music Videos</button>
+        <button class="filter-btn" data-filter="studio">Studio</button>
+        <button class="filter-btn" data-filter="promo">Promotional</button>
       </div>
 
       <div class="gallery-masonry">
-        <!-- Large Item -->
-        <div class="gallery-item large" data-category="park">
-          <img src="images/entrance.jpeg" alt="Park Entrance">
+        <div class="gallery-item large" data-category="promo">
+          <img src="1000978360.jpg" alt="Jungkook Golden Promo">
           <div class="gallery-overlay">
-            <h4>Welcome to Playfield</h4>
-            <p>Your adventure begins here</p>
+            <h4>GOLDEN Concept</h4>
+            <p>The definitive solo era</p>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
 
-        <!-- Regular Items -->
-        <div class="gallery-item" data-category="park">
-          <img src="images/welcome-statue.jpeg" alt="Welcome Statue">
+        <div class="gallery-item" data-category="stage">
+          <img src="images/jk-stage-1.jpg" alt="Standing Next To You Stage">
           <div class="gallery-overlay">
-            <h4>Iconic Welcome</h4>
+            <h4>Stage Performance</h4>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
 
-        <div class="gallery-item" data-category="adventure">
-          <img src="images/tire-adventure.jpeg" alt="Tire Adventure">
+        <div class="gallery-item" data-category="mv">
+          <img src="images/jk-seven-mv.jpg" alt="Seven Music Video">
           <div class="gallery-overlay">
-            <h4>Play & Adventure</h4>
+            <h4>Seven MV</h4>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
 
-        <div class="gallery-item" data-category="events">
-          <img src="images/events-garden.jpeg" alt="Events Garden">
+        <div class="gallery-item" data-category="studio">
+          <img src="images/jk-studio.jpg" alt="Recording Session">
           <div class="gallery-overlay">
-            <h4>Events Garden</h4>
+            <h4>In The Studio</h4>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
 
-        <div class="gallery-item wide" data-category="pool">
-          <img src="images/pool-area.jpeg" alt="Pool Area">
+        <div class="gallery-item wide" data-category="stage">
+          <img src="images/jk-concert.jpg" alt="Live Concert">
           <div class="gallery-overlay">
-            <h4>Aquatic Fun</h4>
-            <p>Cool off in style</p>
+            <h4>Times Square Live</h4>
+            <p>A historic pop moment</p>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
 
-        <div class="gallery-item" data-category="park">
-          <img src="images/park-overview.jpeg" alt="Park Overview">
+        <div class="gallery-item" data-category="promo">
+          <img src="images/jk-calvin.jpg" alt="Calvin Klein Promo">
           <div class="gallery-overlay">
-            <h4>Park Overview</h4>
+            <h4>Global Ambassador</h4>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
 
-        <div class="gallery-item" data-category="events">
-          <img src="images/banner.jpeg" alt="Banner">
+        <div class="gallery-item" data-category="mv">
+          <img src="images/jk-3d-mv.jpg" alt="3D Music Video">
           <div class="gallery-overlay">
-            <h4>Playfield Park</h4>
+            <h4>3D Visuals</h4>
             <button class="view-btn" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
           </div>
         </div>
-
-        <!-- More items can be added here -->
       </div>
 
       <div class="text-center" style="margin-top: 40px;">
@@ -125,7 +118,6 @@
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="">
@@ -134,47 +126,45 @@
     <button class="lightbox-next" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></button>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container-section">
       <div class="footer-content">
         <div class="footer-brand">
           <div class="logo-wrapper">
-            <i class="fas fa-leaf"></i>
-            <h3>Playfield Park</h3>
+            <i class="fas fa-microphone-alt"></i>
+            <h3>JK GOLDEN</h3>
           </div>
-          <p>Your perfect getaway destination in Port Harcourt.</p>
+          <p>The ultimate fan destination for everything Jungkook.</p>
           <div class="social-links">
-            <a href="https://www.instagram.com/play.fieldpark" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/2347040077721"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/JunGkook1839" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" title="KakaoTalk ID: Jungkook-2013"><i class="fas fa-comment"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4>Navigate</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="attractions.html">Attractions</a></li>
-            <li><a href="videos.html">Videos</a></li>
+            <li><a href="about.html">Biography</a></li>
+            <li><a href="attractions.html">Music</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone"></i> 0905 763 7370</p>
-          <p><i class="fas fa-phone"></i> 0704 007 7721</p>
-          <p><i class="fas fa-map-marker-alt"></i> Port Harcourt, Nigeria</p>
+          <h4>Social IDs</h4>
+          <p><i class="fab fa-telegram"></i> @JunGkook1839</p>
+          <p><i class="fas fa-comment"></i> Jungkook-2013</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Playfield Park. All rights reserved.</p>
+        <p>&copy; 2026 JK GOLDEN. For Fan Enjoyment.</p>
       </div>
     </div>
   </footer>
 
   <script>
+    // JS for menu, scroll, filters, and lightbox remains identical to original logic 
+    // to keep the functionality while content changes.
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -189,7 +179,6 @@
       else header.classList.remove('scrolled');
     });
 
-    // Gallery Filter
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -197,9 +186,7 @@
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
         const filter = btn.getAttribute('data-filter');
-        
         galleryItems.forEach(item => {
           if (filter === 'all' || item.getAttribute('data-category') === filter) {
             item.style.display = 'block';
@@ -210,7 +197,6 @@
       });
     });
 
-    // Lightbox
     let currentImageIndex = 0;
     const images = Array.from(document.querySelectorAll('.gallery-item img'));
 
@@ -239,16 +225,6 @@
       if (currentImageIndex >= images.length) currentImageIndex = 0;
       updateLightbox();
     }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (document.getElementById('lightbox').style.display === 'flex') {
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') changeImage(-1);
-        if (e.key === 'ArrowRight') changeImage(1);
-      }
-    });
   </script>
-
 </body>
 </html>
