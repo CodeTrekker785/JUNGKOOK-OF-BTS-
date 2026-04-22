@@ -1,14 +1,30 @@
-/* --- Global Reset & Variables --- */
+/* JK GOLDEN THEME VARIABLES */
 :root {
-  --primary-purple: #6a00f4;
-  --light-purple: #c77dff;
-  --gold: #ffd700;
-  --dark-bg: #0f0f0f;
-  --card-bg: #1a1a1a;
-  --text-main: #ffffff;
-  --text-dim: #aaaaaa;
+  /* Changed from green to Gold & Dark Luxury tones */
+  --primary: #d4af37;        /* Metallic Gold */
+  --primary-dark: #b8860b;   /* Dark Goldenrod */
+  --secondary: #9b5de5;      /* Purple (BTS/JK Signature) */
+  --accent: #f15bb5;         /* Pink accent */
+  --gold-gradient: linear-gradient(135deg, #fceabb 0%, #fccd4d 50%, #f8b500 100%);
+  
+  --dark: #0a0a0a;           /* Deep Black */
+  --dark-light: #1a1a1a;     /* Off Black */
+  --text: #e0e0e0;           /* Light Gray text for dark mode feel */
+  --text-light: #a0a0a0;
+  --white: #ffffff;
+  --gray-100: #121212;       /* Dark Backgrounds */
+  --gray-200: #1f1f1f;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+  --shadow: 0 4px 6px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 25px rgba(212, 175, 55, 0.2); /* Golden shadow */
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.6);
+  
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius: 12px;     /* Sleeker corners */
 }
 
+/* RESET & BODY ADJUSTMENTS */
 * {
   margin: 0;
   padding: 0;
@@ -16,149 +32,77 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif; /* Using the font we linked in HTML */
-  background-color: var(--dark-bg);
-  color: var(--text-main);
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  text-align: center;
+  color: var(--text);
+  background-color: var(--dark); /* Set base to dark */
+  overflow-x: hidden;
 }
 
-/* --- Navigation --- */
-header {
-  background: rgba(15, 15, 15, 0.95);
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #333;
+/* UPDATED LOGO & HEADER */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
-nav ul {
-  list-style: none;
+.logo-wrapper i {
+  font-size: 1.8rem;
+  color: var(--primary); /* Gold Microphone */
+}
+
+/* UPDATED HERO SECTION */
+.hero {
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  /* Darker, more cinematic gradient */
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  background-size: 400% 400%;
 }
 
-nav a {
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-  font-size: 0.9rem;
+.gradient-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: var(--gold-gradient);
+  color: var(--dark); /* Dark text on gold button looks premium */
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-nav a:hover, nav a.active {
-  color: var(--light-purple);
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+  filter: brightness(1.1);
 }
 
-/* --- Page Headers & Hero --- */
-.page-header {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  border-bottom: 2px solid var(--primary-purple);
-  margin-bottom: 40px;
+/* CARDS BACKGROUND */
+.preview-card, .mission-card, .video-card {
+  background: var(--gray-200);
+  border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
-.page-header h1 {
-  font-size: 3rem;
-  color: var(--light-purple);
-  margin-bottom: 10px;
+.preview-card h3, .section h2, .video-info h3 {
+  color: var(--white);
 }
 
-/* --- Common Components --- */
-.container-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: var(--primary-purple);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: 0.3s;
-  border: none;
-  cursor: pointer;
-  margin: 10px;
-}
-
-.btn:hover {
-  background: var(--light-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(106, 0, 244, 0.4);
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 2px solid var(--primary-purple);
-}
-
-/* --- Responsive Images & Videos --- */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-video {
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-  max-width: 100%;
-}
-
-/* --- Footer --- */
-footer {
-  margin-top: 60px;
-  padding: 40px 20px;
-  background: #050505;
-  border-top: 1px solid #222;
-  color: var(--text-dim);
-}
-
-/* --- Mobile Menu Styles --- */
-@media (max-width: 768px) {
-  .page-header h1 { font-size: 2rem; }
-  
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    margin: 0 auto 10px;
-  }
-  
-  .nav-links {
-    display: none; /* Hidden by default on mobile until JS toggles it */
-    flex-direction: column;
-  }
-  
-  .nav-links.active {
-    display: flex;
-  }
-/* Three-Dot Button Styling */
-.menu-dots {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  background: rgba(106, 0, 244, 0.8); /* Purple background */
-  padding: 10px;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-}
+/* ICON COLORS (Discography Section) */
+.preview-icon.amusement { background: var(--gold-gradient); } /* Seven */
+.preview-icon.aquatic { background: linear-gradient(135deg, #6a11cb, #2575fc); } /* 3D */
+.preview-icon.garden { background: linear-gradient(135deg, #24243e, #302b63); } /* Standing Next to You */
+.preview-icon.hotel { background: linear-gradient(135deg, #000000, #434343); } /* Golden Album */
