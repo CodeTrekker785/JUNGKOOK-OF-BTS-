@@ -100,6 +100,45 @@ body {
 .preview-card h3, .section h2, .video-info h3 {
   color: var(--white);
 }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.video-card {
+  cursor: pointer;
+  text-align: center;
+}
+
+.video-thumb {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.video-thumb i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.video-thumb:hover img {
+  transform: scale(1.05);
+}
 
 /* ICON COLORS (Discography Section) */
 .preview-icon.amusement { background: var(--gold-gradient); } /* Seven */
